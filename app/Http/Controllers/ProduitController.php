@@ -62,4 +62,16 @@ class ProduitController extends Controller
         return redirect('/dashboard');
         
     }
+
+
+    public function details(Request $request){
+        $id_details = $request->id_details;
+
+        $products_details = DB::table('produits')->where('id', '=', $id_details)->get();
+
+        // var_dump( $products_details[0]->id);
+        // die();
+        return view('/details_produit', compact('products_details'));
+        
+    }
 }
