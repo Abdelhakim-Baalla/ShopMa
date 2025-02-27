@@ -9,7 +9,5 @@ class Produits extends Model
 {
     use HasFactory;
 
-    public function all(){
-        
-    }
+    
 }

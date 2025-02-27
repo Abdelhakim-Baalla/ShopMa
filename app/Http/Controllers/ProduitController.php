@@ -46,7 +46,8 @@ class ProduitController extends Controller
             'titre' => $request->titre,
             'description' => $request->description,
             'prix' => $request->prix,
-            'image' => $request->image
+            'image' => $request->image,
+            'updated_at' => Carbon::now()
         ]);
 
         return redirect('/dashboard');
