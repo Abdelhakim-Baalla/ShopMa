@@ -43,6 +43,11 @@
                             <button type="submit" class="px-5 py-2 bg-blue-500 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-700 transition">✏️ Modifier</button>
                         </form>
                         
+                        <form action="/produit/details" method="POST">
+                            @csrf
+                            <input type="hidden" name="id_details" value="{{ $produit->id }}">
+                            <button type="submit" class="px-5 py-2 bg-yellow-500 text-white font-semibold rounded-lg shadow-lg hover:bg-yellow-700 transition">📜 Détails</button>
+                        </form>
                         
                         <form action="/supprimer/produit" method="POST" class="inline">
                             @csrf
