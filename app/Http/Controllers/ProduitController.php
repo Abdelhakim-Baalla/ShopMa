@@ -67,11 +67,16 @@ class ProduitController extends Controller
     public function details(Request $request){
         $id_details = $request->id_details;
 
-        $products_details = DB::table('produits')->where('id', '=', $id_details)->get();
+        $products_details = DB::table('produits')->where('id', '=', $id_details)->first();
 
-        // var_dump( $products_details[0]->id);
+        // var_dump( $products_details);
         // die();
         return view('/details_produit', compact('products_details'));
+        
+    }
+
+
+    public function getPanier(Request $request){
         
     }
 }
