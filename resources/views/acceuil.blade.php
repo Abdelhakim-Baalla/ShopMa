@@ -12,8 +12,8 @@
         <!-- Section Hero -->
         <div class="relative bg-cover bg-center h-96 rounded-lg shadow-lg flex items-center justify-center text-white"
             style="background-image: url('https://images.pexels.com/photos/1087727/pexels-photo-1087727.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');">
-            <div class="bg-black bg-opacity-70 p-8 rounded-lg text-center">
-                <h1 class="text-5xl font-extrabold">Bienvenue sur <span class="text-red-500">ShopMa</span> 🛒</h1>
+            <div class=" p-8 rounded-lg text-center">
+                <h1 class="text-5xl font-extrabold text-gray-200">Bienvenue sur <span class="text-white">Shop<p class="text-red-500 inline">Ma</p></span> 🛒</h1>
                 <p class="text-lg mt-2">Découvrez nos meilleurs produits à des prix incroyables.</p>
                 <a href="/produit" class="mt-4 inline-block px-6 py-3 bg-green-600 text-white font-semibold rounded-lg shadow-lg hover:bg-green-700 transition">
                     Voir les Produits
@@ -53,9 +53,6 @@
 
     </div>
 
-    <!-- Footer Fixé en Bas -->
-    <footer class="bg-gray-900 text-white text-center p-4 mt-6">
-        <p>&copy; {{ date('Y') }} ShopMa. Tous droits réservés.</p>
-    </footer>
+    
 </div>
 @endsection

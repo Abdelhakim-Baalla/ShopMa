@@ -37,4 +37,6 @@ Route::controller(ProduitController::class)->group(function(){
     Route::post('/ProduitController/modifier', 'enregisterModification');
     Route::post('/supprimer/produit', 'supprimer');
     Route::post('/modifier/produit', 'modifier');
+    Route::post('/produit/details', 'details');
+    Route::post('/produit/panier', 'getPanier');
   });
