@@ -123,7 +123,7 @@
 var ajouterPanier = document.getElementById("ajouter_panier");
 
 ajouterPanier.addEventListener('click', function(){
-    // localStorage.clear(),
+    // localStorage.clear();
   let quantity = parseInt(document.getElementById("quantity").value);
   let product = {{$products_details->id}};
   let prix = {{ $products_details->prix }};
@@ -140,7 +140,6 @@ ajouterPanier.addEventListener('click', function(){
 
   localStorage.setItem('products', JSON.stringify(products));
 
-  console.log(products);
     
 });
 

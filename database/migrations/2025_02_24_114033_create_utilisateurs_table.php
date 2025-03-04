@@ -19,8 +19,8 @@ return new class extends Migration
             $table->string('prenom');
             $table->string('email')->unique();
             $table->string('password');
-            $table->foreignId('roles_id')->constrained();
-            $table->foreignId('address_id')->constrained();
+            // $table->foreignId('roles_id')->constrained();
+            // $table->foreignId('address_id')->constrained();
             $table->timestamps();
             $table->engine = 'InnoDB';
         });
