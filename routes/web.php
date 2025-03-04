@@ -30,7 +30,7 @@ Route::get('/ajouter/produit', function () {
 
 
 
-Route::controller(ProduitController::class)->group(function(){
+Route::controller(ProduitController::class)->group(function () {
     Route::get('/dashboard', 'index');
     Route::get('/produit', 'produit');
     Route::post('ProduitController/cree', 'cree');
@@ -38,5 +38,5 @@ Route::controller(ProduitController::class)->group(function(){
     Route::post('/supprimer/produit', 'supprimer');
     Route::post('/modifier/produit', 'modifier');
     Route::post('/produit/details', 'details');
-    Route::post('/produit/panier', 'getPanier');
-  });
+    Route::post('/produit/panier', 'Panier');
+});

@@ -19,6 +19,8 @@ return new class extends Migration
             $table->text('description');
             $table->float('prix');
             $table->string('image');
+            $table->bigInteger('quantity_selecter')->default(0);
+            $table->bigInteger('prix_selecter')->default(0);
             $table->timestamps();
             $table->engine = 'InnoDB';
         });

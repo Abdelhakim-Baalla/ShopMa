@@ -14,10 +14,10 @@ return new class extends Migration
     public function up()
     {
         Schema::create('roles', function (Blueprint $table) {
-            $table->engine = 'InnoDB';
             $table->id();
             $table->string('nom');
             $table->timestamps();
+            $table->engine = 'InnoDB';
         });
     }
 
