@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProduitController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +15,28 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('acceuil');
+});
+
+
+
+Route::get('/ajouter/produit', function () {
+    return view('ajouter_produit');
+});
+
+// Route::post('/modifier/produit', function () {
+//     return view('modifier_produit');
+// });
+
+
+
+Route::controller(ProduitController::class)->group(function () {
+    Route::get('/dashboard', 'index');
+    Route::get('/produit', 'produit');
+    Route::post('ProduitController/cree', 'cree');
+    Route::post('/ProduitController/modifier', 'enregisterModification');
+    Route::post('/supprimer/produit', 'supprimer');
+    Route::post('/modifier/produit', 'modifier');
+    Route::post('/produit/details', 'details');
+    Route::post('/produit/panier', 'Panier');
 });
