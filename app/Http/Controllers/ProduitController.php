@@ -100,4 +100,10 @@ class ProduitController extends Controller
 
         return response()->json($products);
     }
+
+
+    public function commande(Request $request){
+        echo 'commande';
+        var_dump($request) ;
+    }
 }

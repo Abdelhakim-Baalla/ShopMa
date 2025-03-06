@@ -13,12 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('utilisateurs', function (Blueprint $table) {
+        Schema::create('command_items', function (Blueprint $table) {
             $table->id();
-            $table->string('nom');
-            $table->string('prenom');
-            $table->string('email')->unique();
-            $table->string('password');
+            $table->foreignId('produits')->constrained();
+            $table->foreignId('commandes')->constrained();
+            $table->bigInteger('quantite');
             $table->timestamps();
             $table->engine = 'InnoDB';
         });
@@ -31,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('commande_items');
     }
 };
