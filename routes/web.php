@@ -39,4 +39,5 @@ Route::controller(ProduitController::class)->group(function () {
     Route::post('/modifier/produit', 'modifier');
     Route::post('/produit/details', 'details');
     Route::post('/produit/panier', 'Panier');
+    Route::get('/produit/commande', 'commande');
 });

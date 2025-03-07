@@ -13,13 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('utilisateurs', function (Blueprint $table) {
-            $table->id();
-            $table->string('nom');
-            $table->string('prenom');
-            $table->string('email')->unique();
-            $table->string('password');
-            $table->timestamps();
+        Schema::table('utilisateurs', function (Blueprint $table) {
+            $table->foreignId('addresses')->constrained();
             $table->engine = 'InnoDB';
         });
     }
