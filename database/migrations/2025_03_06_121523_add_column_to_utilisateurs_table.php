@@ -13,12 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('address', function (Blueprint $table) {
-            $table->id();
-            $table->string('city');
-            $table->string('country');
-            $table->bigInteger('zip-code');
-            $table->timestamps();
+        Schema::table('utilisateurs', function (Blueprint $table) {
+            $table->foreignId('roles')->constrained();
             $table->engine = 'InnoDB';
         });
     }
@@ -30,6 +26,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('address');
+        Schema::dropIfExists('users');
     }
 };
